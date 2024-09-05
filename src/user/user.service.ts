@@ -17,7 +17,7 @@ export class UserService {
     }
 
     async deleteById(id: number): Promise<void> {
-        await this.usersRepository.delete(id);
+        await this.usersRepository.delete({id: id});
     }
 
     async insert(userDto: CreateUserDto): Promise<void>{

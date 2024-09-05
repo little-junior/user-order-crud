@@ -30,7 +30,7 @@ export class ProductService {
 
     async update(productId: number, productDto: CreateProductDto): Promise<void>{
         const product = new Product;
-        product.name = product.name;
+        product.name = productDto.name;
         product.price = productDto.price;
         
         await this.productRepository.update(productId, product);

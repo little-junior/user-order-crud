@@ -7,9 +7,6 @@ export class Order {
     @PrimaryGeneratedColumn("uuid")
     id: string;
 
-    @Column()
-    user_id: number 
-
     @CreateDateColumn()
     created_at: Date;
 

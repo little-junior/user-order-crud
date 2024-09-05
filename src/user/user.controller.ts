@@ -3,9 +3,9 @@ import { UserService } from './user.service';
 import { CreateUserDto } from 'src/common/dtos/user/create-user.dto';
 import { User } from './user.entity';
 
-@Controller('user')
-export class UserController {
-    constructor(@Inject() private readonly userService: UserService) {}
+@Controller('users')
+export class UsersController {
+    constructor(private readonly userService: UserService) {}
 
     @Get()
     async getAll(): Promise<User[]>{

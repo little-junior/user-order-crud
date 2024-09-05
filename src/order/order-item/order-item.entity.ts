@@ -5,7 +5,7 @@ import { Product } from 'src/product/product.entity'
 
 @Entity()
 export class OrderItem {
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn("uuid")
     id: string
 
     @Column("decimal")
@@ -13,12 +13,6 @@ export class OrderItem {
 
     @Column("int")
     quantity: number
-
-    @Column("int")
-    productId: number
-
-    @Column()
-    orderId: string
 
     @ManyToOne(() => Order)
     order: Order
